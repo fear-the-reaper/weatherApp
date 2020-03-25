@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Landing page</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    {{!-- putting partial --}}
+    {{>header}}
+    <div class="index">
+        <h1>Welcome to our {{app}}!</h1>
+        <h2>How can we help you Mr {{userName}}</h2>
+        <form>
+        <input type="text" placeholder = "Boston" class="searchForm">
+        <button type="submit" class="searchForm">submit</button>
+        <p class="forecast">
+        </p>
+    </form>
+    </div>
+    {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+</html>

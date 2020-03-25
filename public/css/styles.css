@@ -1,0 +1,78 @@
+body {
+    font-family: monospace;
+    margin: 0px auto;
+    padding: 0 16px;
+}
+
+.header {
+    /* width: 100%; */
+    background: darkblue;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 15px;
+}
+
+.footer {
+    background: darkcyan;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 15px;
+}
+
+
+.logo {
+    text-align: left;
+    color:white;
+    display: inline-block;
+}
+
+.links {
+    text-align: right;
+    display: inline-block;
+    margin-left: 60rem;
+}
+
+a {
+    margin-left: 15px;
+    color: lavender;
+}
+
+.index {
+    margin: 25px 25px;
+    border: 1px solid yellow;
+    padding: 25px 25px;
+    text-align: left;
+    width: auto;
+}
+
+.faqs {
+    position: relative;
+    padding: 9px 10px;
+    margin-left: 50px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid darkgreen;
+    border-radius: 15%;
+}
+
+.searchForm {
+    padding: 5px 5px;
+}
+
+.forecast {
+    display: none;
+}
+
+div.index > h1 {
+    text-align: left;
+    letter-spacing: 2px;
+}
+
+div.faqs:hover {
+    transform: translateY(-3px);
+    box-shadow: 1px 0px 5px;
+    border: 1px solid mediumturquoise;
+    background-color: mediumturquoise;   
+}
+
+
