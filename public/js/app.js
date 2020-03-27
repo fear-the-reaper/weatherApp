@@ -16,7 +16,9 @@ const apiCall = (address) => {
 };
 
 // Getting the input from the user!
-const  endpoint = "http://localhost:3000/weather?address=";
+// Since we may use heroku or localhost we don't actually need to type it explicitly 
+// node inferes so like with our directories in href or path we can just write our route
+const  endpoint = "/weather?address=";
 const formInfo = document.querySelector("form");
 formInfo.addEventListener("submit", (e) => {
     e.preventDefault();

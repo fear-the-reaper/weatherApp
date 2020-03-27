@@ -7,6 +7,14 @@ const forecast = require("./utils/forecast.js");
 
 
 const app = express();
+// Since heroku uses its own port which changes overtime we set it up!
+// it has an evironment var we can access thru procees.env:
+const port;
+if (!process.env.PORT) {
+    port = 3000;
+} else {
+    port = process.env.PORT;
+}
 
 const landingPage = path.join(__dirname, "../public");
 const templates = path.join(__dirname, "../templates/views");
@@ -101,6 +109,6 @@ app.get("*", (req, res) => {
 
 
 
-app.listen(3000, () => {
-    console.log("The server is up and running!!!");
+app.listen(port, () => {
+    console.log("The server is up and running!!! @ " + port);
 });
