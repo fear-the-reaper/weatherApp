@@ -9,7 +9,7 @@ const forecast = require("./utils/forecast.js");
 const app = express();
 // Since heroku uses its own port which changes overtime we set it up!
 // it has an evironment var we can access thru procees.env:
-const port;
+let port;
 if (!process.env.PORT) {
     port = 3000;
 } else {
