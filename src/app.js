@@ -64,13 +64,14 @@ app.get("/weather", (req, res) => {
     }
     geocode(address, (error, data) => {
         if(!error){
-            return forecast(data, (error, {name, timezone, temperature, chanceOfRain} ) => {
+            return forecast(data, (error, {name, timezone, temperature, chanceOfRain, summary} ) => {
                 if(!error){
                     return res.send({
                         name,
                         timezone,
                         temperature,
-                        chanceOfRain
+                        chanceOfRain,
+                        summary
                     });   
                 }
                 res.send({error});

@@ -1,16 +1,17 @@
 const apiCall = (address) => {
     fetch(address).then((response) => {
-        response.json().then((data) => {
+        response.json().then(({error, name, timezone, temperature, chanceOfRain, summary}) => {
             const pTag = document.querySelector("p");
             pTag.style.display = "block";
-            if (!data.error) {
+            if (!error) {
                 // return console.log(data);
-                return pTag.textContent = `Name: ${data.name}
-                Timezone: ${data.timezone}
-                Temperature: ${data.temperature}
-                Chance of Rain: ${data.chanceOfRain}%`;
+                return pTag.textContent = `Name: ${name}
+                Timezone: ${timezone}
+                Temperature: ${temperature}
+                Chance of Rain: ${chanceOfRain}%
+                Summary: ${summary}`;
             }
-            pTag.textContent = `Error: ${data.error}`;
+            pTag.textContent = `Error: ${error}`;
         }); 
     });
 };

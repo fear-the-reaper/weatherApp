@@ -14,12 +14,14 @@ const forecast = ({name, latitude, longitude}, callback) => {
         }else{
             const forecastData = body.currently;
             const {timezone} = body;
-            const {temperature, precipProbability:chanceOfRain} = forecastData; 
+            const {temperature, precipProbability:chanceOfRain} = forecastData;
+            const {summary} = body.daily; 
             const forecastInfo = {
                 name,
                 timezone,
                 temperature,
-                chanceOfRain 
+                chanceOfRain,
+                summary 
             };
             callback(undefined, forecastInfo); 
         }
