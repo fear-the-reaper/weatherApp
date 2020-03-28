@@ -37,6 +37,10 @@ a {
     color: lavender;
 }
 
+#link {
+    color: navy;
+}
+
 .index {
     margin: 25px 25px;
     border: 1px solid yellow;
